@@ -1,4 +1,4 @@
-/* styles.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +8,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   min-height: 100vh;
-  background: #333333; /* fallback */
+  background: #333333; 
   background: -webkit-linear-gradient(to bottom, #dd1818, #333333);
-  background: linear-gradient(to bottom, #dd1818, #333333);
+  background: linear-gradient(to bottom, #e75b5b, #333333);
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
-/* Overlay semi-opaco para melhorar contraste */
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -33,7 +33,7 @@ body {
   padding: 2rem;
 }
 .card {
-  background: rgba(51, 19, 19, 0.75);
+  background: rgba(82, 32, 32, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 24px;
@@ -47,7 +47,7 @@ body {
   z-index: 3;
   margin: 2rem auto;
 }
-/* Ajustes para texto dentro do card */
+
 .card h1 {
   font-size: 3.2rem;
   margin-bottom: 1rem;
@@ -211,7 +211,7 @@ header.scrolled {
   color: #ffffff;
 }
 
-/* Rolagem suave */
+
 html {
   scroll-behavior: smooth;
 }
