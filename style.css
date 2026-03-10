@@ -1,0 +1,344 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background: #333333; /* fallback */
+  background: -webkit-linear-gradient(to bottom, #dd1818, #333333);
+  background: linear-gradient(to bottom, #dd1818, #333333);
+  position: relative;
+  overflow-x: hidden;
+}
+/* Overlay semi-opaco para melhorar contraste */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+.container {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.card {
+  background: rgba(51, 19, 19, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin: 2rem auto;
+}
+/* Ajustes para texto dentro do card */
+.card h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+}
+.card .slogan {
+  font-size: 1.4rem;
+  opacity: 0.95;
+  margin: 0;
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+}
+.slogan {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  max-width: 700px;
+}
+.info {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.cta {
+  margin-top: 2.5rem;
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+  color: #1a0000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1rem 2.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.7);
+}
+.social {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+.social a {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  transition: color 0.3s;
+}
+.social a:hover {
+  color: #fff;
+}
+
+/* Logo */
+.fixed-logo {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  transition: top 0.4s ease, left 0.4s ease;
+}
+body.scrolled .fixed-logo {
+  top: 0.5rem;
+  left: 0.8rem;
+}
+.fixed-logo .logoimg {
+  height: 140px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.5));
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.scrolled .fixed-logo .logoimg {
+  height: 55px;
+  max-width: 140px;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
+  border-radius: 12px;
+}
+.logo-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.logo-link:hover {
+  transform: scale(1.05);
+}
+.logo-link:active {
+  transform: scale(0.98);
+}
+
+/* Header com mais itens */
+header {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 9999px;
+  padding: 0.55rem 1.6rem;
+  min-width: 300px;
+  max-width: 94vw;
+  background: rgba(139, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  transition: all 0.3s ease;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+header.scrolled {
+  top: 0.5rem;
+  padding: 0.4rem 1.4rem;
+  background: rgba(139, 0, 0, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.header-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #FFD700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.header-contact-btn,
+.header-products-btn,
+.header-info-btn {
+  background: transparent;
+  border: none;
+  color: #FFD700;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.header-contact-btn:hover,
+.header-products-btn:hover,
+.header-info-btn:hover {
+  color: #ffffff;
+}
+
+/* Rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+#cta {
+  scroll-margin-top: 100px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card {
+    padding: 2.2rem 1.6rem;
+    max-width: 95%;
+    border-radius: 20px;
+  }
+  .card h1 {
+    font-size: 2.4rem;
+  }
+  .card .slogan {
+    font-size: 1.25rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  .slogan {
+    font-size: 1.25rem;
+  }
+  .container {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 540px) {
+  .fixed-logo {
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+  .fixed-logo .logoimg {
+    height: 90px;
+    max-width: 200px;
+  }
+  body.scrolled .fixed-logo .logoimg {
+    height: 48px;
+    max-width: 120px;
+  }
+  body.scrolled .fixed-logo {
+    top: 0.5rem;
+    left: 0.8rem;
+  }
+
+  header {
+    top: 1rem;
+    padding: 0.4rem 1.1rem;
+    min-width: 90%;
+    max-width: 96vw;
+    gap: 0.8rem;
+    justify-content: space-around;
+  }
+  header.scrolled {
+    top: 0.5rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+  .header-contact-btn,
+  .header-products-btn,
+  .header-info-btn {
+    font-size: 0.88rem;
+  }
+
+  .container {
+    padding-top: 105px;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .card {
+    padding: 1.8rem 1.2rem;
+    max-width: 98%;
+  }
+  .card h1 {
+    font-size: 2.2rem;
+  }
+  .card .slogan {
+    font-size: 1.15rem;
+  }
+
+  .btn {
+    font-size: 1.15rem;
+    padding: 0.85rem 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .fixed-logo .logoimg {
+    height: 75px;
+    max-width: 170px;
+  }
+  body.scrolled .fixed-logo .logoimg {
+    height: 42px;
+    max-width: 110px;
+  }
+
+  header {
+    padding: 0.35rem 0.9rem;
+    min-width: 95%;
+    gap: 0.6rem;
+  }
+
+  .header-title {
+    font-size: 0.92rem;
+  }
+  .header-contact-btn,
+  .header-products-btn,
+  .header-info-btn {
+    font-size: 0.82rem;
+  }
+
+  .container {
+    padding-top: 95px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  .slogan {
+    font-size: 1.05rem;
+  }
+}

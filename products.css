@@ -1,0 +1,93 @@
+/* Estilos específicos para imagens de produtos */
+.product-image {
+  max-width: 400px;              /* tamanho máximo desejado - ajuste conforme precisar */
+  width: 100%;                   /* ocupa o espaço disponível dentro do pai, mas respeita max-width */
+  height: auto;                  /* mantém a proporção original da imagem */
+  display: block;                /* tira espaços indesejados embaixo da imagem */
+  margin: 2rem auto;             /* centraliza horizontalmente + espaço em cima/embaixo */
+  border-radius: 16px;           /* bordas arredondadas (opcional, mas fica bonito) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* sombra suave para destacar */
+  object-fit: cover;             /* corta se necessário, mas mantém proporção (opcional) */
+}
+
+/* Se quiser que ela fique menor em telas pequenas (responsivo) */
+@media (max-width: 768px) {
+  .product-image {
+    max-width: 90%;              /* quase full-width no celular */
+    margin: 1.5rem auto;
+  }
+}
+
+/* Opcional: hover para dar um toque interativo */
+.product-image:hover {
+  transform: scale(1.05);        /* zoom suave ao passar o mouse */
+  transition: transform 0.3s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Seção de produto com texto à esquerda e imagem à direita */
+.product-section {
+  display: flex;                    /* ativa flexbox para lado a lado */
+  align-items: center;              /* centraliza verticalmente os itens */
+  justify-content: space-between;   /* empurra um para esquerda e outro para direita */
+  gap: 3rem;                        /* espaço entre texto e imagem */
+  margin: 3rem 0;                   /* espaço em cima e embaixo da seção */
+  flex-wrap: wrap;                  /* em telas pequenas, empilha (texto em cima) */
+}
+
+/* Texto à esquerda */
+.product-text {
+  flex: 1;                          /* ocupa o espaço disponível */
+  min-width: 300px;                 /* evita que fique muito estreito */
+  text-align: left;
+}
+
+.product-text h2 {
+  font-size: 2rem;
+  color: #FFD700;                   /* dourado para destacar */
+  margin-bottom: 1rem;
+}
+
+.product-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Imagem à direita */
+.product-image-wrapper {
+  flex: 1;                          /* ocupa espaço igual ou proporcional */
+  max-width: 400px;                 /* limite máximo da imagem */
+  text-align: right;                /* alinha a imagem à direita dentro do wrapper */
+}
+
+.product-image {
+  max-width: 100%;                  /* não ultrapassa o wrapper */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsivo: em telas menores, empilha (texto em cima, imagem embaixo) */
+@media (max-width: 768px) {
+  .product-section {
+    flex-direction: column;         /* muda para coluna */
+    align-items: center;            /* centraliza tudo */
+    text-align: center;             /* texto centralizado no mobile */
+  }
+
+  .product-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .product-image-wrapper {
+    text-align: center;
+  }
+}

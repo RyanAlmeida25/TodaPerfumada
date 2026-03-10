@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toda Perfumada | Perfumaria e Presentes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<div class="fixed-logo">
+  <a href="#" class="logo-link">
+    <img src="img/Sloganslogan2.png" alt="Toda Perfumada - Voltar ao topo" class="logoimg">
+  </a>
+</div>
+
+  <header>
+    <div class="header-title">Loja Toda Perfumada</div>
+    <a href="#cta" class="header-contact-btn">Contato</a>
+    <a href="#ps" class="header-products-btn">Catálogo</a>
+    <a href="#info" class="header-info-btn">Informações</a>
+  </header>
+
+  <div class="overlay"></div>
+  <div class="container">
+    <img
+      src=""
+      alt="Toda Perfumada - Perfumaria e Presentes"
+      class=""
+    />
+    
+  <div class="card">
+    <h1>Toda Perfumada</h1>
+    <p class="slogan">Perfumaria de qualidade e presentes inesquecíveis para todos os momentos especiais.</p>
+  </div>
+
+    <div class="product-section" id="ps">
+      <div class="product-text">
+        <h2>Produtos Cacau Show</h2>
+        <p>A dupla perfeita para presentear quem ama! </p>
+        <p>Variedade incrivel de Panetones para todos os gostos. É uma verdadeira explosão de sabor e alegria! Quem mais está com água na boca?</p>
+      </div>
+
+      <div class="product-image-wrapper">
+        <a href="https://www.instagram.com/p/DRQJnUYkfDX/?img_index=1" target="_blank">
+
+          <img 
+          src="img/produto1.jpg" 
+          alt="Produto Destaque" 
+          class="product-image"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="info-section" id="info">
+      Chegamos para trazer o melhor do universo das fragrâncias e surpresas personalizadas.<br>
+      Em breve: loja online + entrega rápida em Ibimirim e região!
+    </div>
+
+    <div class="cta" id="cta">
+      <a href="https://wa.me/5588999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20perfumes%20e%20presentes" class="btn" target="_blank">
+        Fale conosco no WhatsApp →
+      </a>
+    </div>
+
+    <div class="social">
+      <a href="https://www.instagram.com/lojatodaperfumadaa/" target="_blank">@todaperfumada</a> • 
+      <a href="https://wa.me/5588999999999" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+  // Detecta scroll e adiciona/remove classe 'scrolled' no body
+  window.addEventListener('scroll', () => {
+    // Navbar já tem .scrolled – reutilizamos a lógica
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > 100) {  // diminui após 100px de scroll – ajuste se quiser mais cedo/tarde
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+    
+    // Seu código existente da navbar (mantém funcionando)
+    document.querySelector('header').classList.toggle('scrolled', scrollPosition > 100);
+  });
+</script>
+
+</body>
+</html>
